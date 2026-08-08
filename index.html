@@ -9,47 +9,70 @@
 </head>
 <body>
     <main class="app-shell" aria-label="Task manager application">
-        <header>
-            <h1>📝 Task Manager</h1>
-            <p>Stay organized. Stay productive.</p>
+        <header class="hero">
+            <div class="hero-copy">
+                <span class="eyebrow">Productivity Suite</span>
+                <h1>Build focus into every day.</h1>
+                <p>Plan your work with clear priorities, stay on top of deadlines, and close each day with momentum.</p>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="activeProjectsCount">0</div>
+                    <div class="stat-label">Active projects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="trackedCount">0</div>
+                    <div class="stat-label">Tasks tracked</div>
+                </div>
+            </div>
         </header>
-        <form class="task-form" id="taskForm" aria-label="Add a new task">
-            <div class="row">
-                <label for="title">
-                    Task
-                    <input type="text" id="title" name="title" placeholder="Enter task name" required>
-                </label>
-                <label for="dueDate">
-                    Due Date
-                    <input type="date" id="dueDate" name="dueDate" aria-label="Task due date">
-                </label>
+
+        <section class="workspace-panel">
+            <form class="task-form" id="taskForm" aria-label="Add a new task">
+                <div class="field-row">
+                    <label for="title">
+                        Task name
+                        <input type="text" id="title" name="title" placeholder="Create a memorable task" required>
+                    </label>
+                    <label for="dueDate">
+                        Due date
+                        <input type="date" id="dueDate" name="dueDate" aria-label="Task due date">
+                    </label>
+                </div>
+                <div class="field-row">
+                    <label for="priority" class="full">
+                        Priority
+                        <select id="priority" name="priority">
+                            <option value="High">High</option>
+                            <option value="Normal">Normal</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </label>
+                    <button type="submit" class="add-btn">Add task</button>
+                </div>
+            </form>
+
+            <div class="counters" aria-hidden="false">
+                <div class="counter">
+                    <div class="label">Total tasks</div>
+                    <div class="value" id="totalCount">0</div>
+                </div>
+                <div class="counter">
+                    <div class="label">Pending</div>
+                    <div class="value" id="pendingCount">0</div>
+                </div>
+                <div class="counter">
+                    <div class="label">Completed</div>
+                    <div class="value" id="completedCount">0</div>
+                </div>
             </div>
-            <label for="priority" class="full">
-                Priority
-                <select id="priority" name="priority">
-                    <option value="High">HIGH</option>
-                    <option value="Normal">NORMAL</option>
-                    <option value="Low">LOW</option>
-                </select>
-            </label>
-            <button type="submit" class="add-btn">+ Add Task</button>
-        </form>
-        <div class="counters" aria-hidden="false">
-            <div class="counter">
-                <div class="label">Total</div>
-                <div class="value" id="totalCount">12</div>
-            </div>
-            <div class="counter">
-                <div class="label">Pending</div>
-                <div class="value" id="pendingCount">5</div>
-            </div>
-            <div class="counter">
-                <div class="label">Completed</div>
-                <div class="value" id="completedCount">7</div>
-            </div>
-        </div>
+        </section>
+
         <ul class="task-list" id="taskList" aria-live="polite"></ul>
+        <div class="empty-state" id="emptyState">
+            <strong>Nothing on the board yet.</strong>
+            <p>Start by adding a task above. The dashboard will populate with your priorities and progress.</p>
+        </div>
     </main>
-    
 </body>
 </html>
