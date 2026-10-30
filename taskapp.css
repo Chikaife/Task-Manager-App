@@ -12,8 +12,8 @@
     --accent: #798aaf;
     --accent-strong: #25304f;
     --accent-soft: #e8f0ff;
-    --success: #10b981;
-    --danger: #ef4444;
+    --success: #28735a;
+    --danger: #772c2c;
     --border: #e2e8f0;
     --shadow: 0 22px 48px rgba(15, 23, 42, 0.14);
     --shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.08);
@@ -238,7 +238,7 @@ body::after {
 
 .task-list {
     list-style: none;
-    margin: 0;
+    margin-top: 15px;
     padding: 0;
     display: grid;
     gap: 18px;
@@ -282,9 +282,9 @@ body::after {
     gap: 16px;
     align-items: center;
     padding: 22px;
-    border: 1px solid var(--border);
-    background: linear-gradient(145deg, #ffffff 0%, #fcfdff 100%);
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+    border: 1px solid ash;
+    background: linear-gradient(145deg, #34363f 0%, #373a40 100%);
+    box-shadow: 0 10px 24px rgba(43, 44, 48, 0.05);
     transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
@@ -303,7 +303,7 @@ body::after {
 .task-title {
     font-size: 1.05rem;
     font-weight: 700;
-    color: #0f172a;
+    color: #d3d7df;
     line-height: 1.4;
     overflow-wrap: anywhere;
 }
@@ -313,7 +313,7 @@ body::after {
     flex-wrap: wrap;
     gap: 12px;
     font-size: 0.9rem;
-    color: #64748b;
+    color: #a3a8b0;
 }
 
 .prio {
@@ -328,18 +328,18 @@ body::after {
 }
 
 .prio-high {
-    background: rgba(249, 115, 22, 0.12);
-    color: #c2410c;
+    background: rgba(146, 76, 26, 0.12);
+    color: #993e19;
 }
 
 .prio-normal {
-    background: rgba(59, 130, 246, 0.12);
-    color: #1d4ed8;
+    /* background: rgba(59, 130, 246, 0.12); */
+    color: #22376f;
 }
 
 .prio-low {
-    background: rgba(16, 185, 129, 0.12);
-    color: #047857;
+    /* background: rgba(16, 185, 129, 0.12); */
+    color: #1d5746;
 }
 
 .task-actions {
@@ -350,7 +350,6 @@ body::after {
 
 .task-actions button {
     border: none;
-    border-radius: 14px;
     padding: 12px 16px;
     cursor: pointer;
     font-size: 0.9rem;
@@ -370,20 +369,20 @@ body::after {
 }
 
 .remove-btn {
-    background: linear-gradient(135deg, var(--danger) 0%, #f87171 100%);
+    background: linear-gradient(135deg, var(--danger) 0%, #8f3d3d 100%);
     color: #fff;
     box-shadow: 0 10px 20px rgba(239, 68, 68, 0.16);
 }
 
 .task-item.completed .task-title {
     text-decoration: line-through;
-    color: #6b7280;
+    color: #ebeced;
 }
 
 .task-item.completed {
-    background: linear-gradient(145deg, #f5fff9 0%, #ecfdf5 100%);
+    background: linear-gradient(145deg, #42604e 0%, #5b967b 100%);
     border-color: #d1fae5;
-    box-shadow: 0 12px 24px rgba(16, 185, 129, 0.08);
+    box-shadow: 0 12px 24px rgba(27, 143, 104, 0.08);
 }
 
 .empty-state {
