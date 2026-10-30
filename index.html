@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
     <link rel="stylesheet" href="taskapp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&family=Rubik+Storm&display=swap" rel="stylesheet">
     <script src="taskapp.js" defer></script>
 </head>
 <body>
     <main class="app-shell" aria-label="Task manager application">
         <header class="hero">
             <div class="hero-copy">
-                <span class="eyebrow">Productivity Suite</span>
+                <h1><span class="eyebrow">Productivity Suite</span></h1>
                 <h1>Build focus into every day.</h1>
                 <p>Plan your work with clear priorities, stay on top of deadlines, and close each day with momentum.</p>
             </div>
@@ -32,7 +35,7 @@
                 <div class="field-row">
                     <label for="title">
                         Task name
-                        <input type="text" id="title" name="title" placeholder="Create a memorable task" required>
+                        <input type="text" id="title" name="title" placeholder="Create a task" required>
                     </label>
                     <label for="dueDate">
                         Due date
@@ -71,7 +74,7 @@
         <ul class="task-list" id="taskList" aria-live="polite"></ul>
         <div class="empty-state" id="emptyState">
             <strong>Nothing on the board yet.</strong>
-            <p>Start by adding a task above.</p>
+            <p>Start by adding a task above. The dashboard will populate with your priorities and progress.</p>
         </div>
     </main>
 </body>
